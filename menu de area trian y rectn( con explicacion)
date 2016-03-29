@@ -1,0 +1,56 @@
+// menu12.cpp : Defines the entry point for the console application.
+//comentarios
+//Autor: Sebastian Roca Antelo
+//29 de marzo del 2016
+
+//librerias
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	//declaracion de variables
+	int opcion;
+   float base, altura, area;//variables enteras(solo eso
+   //float permite decimales
+   //cout muestra el letrero en la pantalla
+   cout << "Ingrese base: " ;
+   //cin espara ingresar/introducir datos del teclado
+   cin >> base;
+   cout << "Ingrese altura: " ;
+   cin >> altura;
+   //es un ciclo repetitivo (do)
+   do {
+     cout << endl;
+     cout << "1.- Sacar area de triangulo" << endl;
+     cout << "2.- Sacar area de rectangulo" << endl;
+	 cout << "0.- Salir" << endl;
+     cout << "Elige una opción: " ;
+     cin >> opcion;
+
+	 // switch es una condicional multiple equivale a utilizar varios "if"
+     switch (opcion) {
+	    case 1:
+			{
+			area = (base * altura)/2;   //break signfica terminar la instruccion
+			break;
+			}
+	    case 2: 
+			{
+			area = base * altura; //case es el nombre de las opciones
+			break;
+			}
+		case 0: cout << "Salir";break;
+
+			//default es par ninguna de las anteriores
+	    default: cout << "Opcion invalida" << endl;
+     }
+     cout << "El area es: " << area << endl;
+	 } while (opcion != 0);
+
+   //fin del ciclo repetitivo/while acaba el ciclo
+     getch();
+}
